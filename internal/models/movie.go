@@ -11,5 +11,5 @@ type Movie struct {
 	Description string    `json:"description"`
 	Image       string    `json:"image"`
 	CreatedAt   time.Time `json:"-"`
-	UpdateAt    time.Time `json:"-"`
+	UpdatedAt   time.Time `json:"-"`
 }

@@ -7,13 +7,17 @@ import (
 	"time"
 )
 
-type postgresDBRepo struct {
-	db *sql.DB
+type PostgresDBRepo struct {
+	DB *sql.DB
 }
 
 const dbTimeout = time.Second * 3
 
-func (m *postgresDBRepo) AllMovies() ([]*models.Movie, error) {
+func (m *PostgresDBRepo) Connection() *sql.DB {
+	return m.DB
+}
+
+func (m *PostgresDBRepo) AllMovies() ([]*models.Movie, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), dbTimeout)
 	defer cancel()
 
@@ -34,7 +38,7 @@ func (m *postgresDBRepo) AllMovies() ([]*models.Movie, error) {
 			 title
 	`
 
-	rows, err := m.db.QueryContext(ctx, query)
+	rows, err := m.DB.QueryContext(ctx, query)
 	if err != nil {
 		return nil, err
 	}

@@ -5,13 +5,13 @@ go 1.23.0
 require (
 	github.com/go-chi/chi v1.5.5
 	github.com/go-chi/chi/v5 v5.2.2
+	github.com/golang-jwt/jwt/v4 v4.5.2
 	github.com/jackc/pgconn v1.14.3
 	github.com/jackc/pgx/v4 v4.18.3
 	github.com/lib/pq v1.10.9
 )
 
 require (
-	github.com/golang-jwt/jwt/v4 v4.5.2 // indirect
 	github.com/jackc/chunkreader/v2 v2.0.1 // indirect
 	github.com/jackc/pgio v1.0.0 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect

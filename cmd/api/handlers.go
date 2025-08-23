@@ -131,6 +131,10 @@ func (app *application) logout(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusAccepted)
 }
 
+func (app *application) MovieCatalog(w http.ResponseWriter, r *http.Request) {
+
+}
+
 // highlander := models.Movie{
 // 	ID:          1,
 // 	Title:       "Highlander",
